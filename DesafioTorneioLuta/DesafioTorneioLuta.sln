@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioTorneioLuta", "DesafioTorneioLuta\DesafioTorneioLuta.csproj", "{D801EC5A-EE95-4123-A19C-11416E795212}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreModels", "CoreModels\CoreModels.csproj", "{EA57BC54-C286-4336-AECB-06491CBDA865}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreApiClient", "CoreApiClient\CoreApiClient.csproj", "{2A69E186-FE23-4D7E-AA9F-2430CD7418A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D801EC5A-EE95-4123-A19C-11416E795212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D801EC5A-EE95-4123-A19C-11416E795212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D801EC5A-EE95-4123-A19C-11416E795212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D801EC5A-EE95-4123-A19C-11416E795212}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA57BC54-C286-4336-AECB-06491CBDA865}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA57BC54-C286-4336-AECB-06491CBDA865}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA57BC54-C286-4336-AECB-06491CBDA865}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA57BC54-C286-4336-AECB-06491CBDA865}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A69E186-FE23-4D7E-AA9F-2430CD7418A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A69E186-FE23-4D7E-AA9F-2430CD7418A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A69E186-FE23-4D7E-AA9F-2430CD7418A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A69E186-FE23-4D7E-AA9F-2430CD7418A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

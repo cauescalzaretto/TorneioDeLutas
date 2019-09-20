@@ -1,0 +1,68 @@
+﻿@model List<CoreModels.GrupoModel>
+
+@{
+    ViewBag.Title = "Resultado";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<form method="post" asp-action="Torneio" asp-controller="Torneio">
+
+    @Html.AntiForgeryToken()
+
+    <br>
+
+    <h2 style="text-align:center">Resultado</h2>
+
+    <br>
+
+    @if (ViewBag.Message != null)
+    {
+        <h3 style="text-decoration-color:red">@ViewBag.Message</h3>
+    }
+
+    <br>
+
+    @{
+        for (int i = 0; i < Model.Count(); i++)
+        {
+        <table style="border-width:1; border-color:Black">
+            <tr style="width:200px">
+                <thead><th></th></thead>
+                       <tbody>
+                           @if (Model[i].posicao == 1)
+                           {
+                               <tr><th><h2>Campeão</h2></th></tr>
+                               <tr><th>@Model[i].lutador.nome</th></tr>
+                               <p></p>
+                           }
+
+                           @if (Model[i].posicao == 2)
+                           {
+
+                               <tr><th><h3 >Segundo</h3></th></tr>
+                               <tr><td>@Model[i].lutador.nome</td></tr>
+                               <p></p>
+
+                           }
+
+                           @if (Model[i].posicao == 3)
+                           {
+
+                               <tr><th><h3>Terceiro</h3></th></tr>
+                               <tr><td>@Model[i].lutador.nome</td></tr>
+                               <p></p>
+
+                           }
+                       </tbody>
+                </tr>
+            </table>
+        }
+
+    }
+
+
+            </form>
+
+
+

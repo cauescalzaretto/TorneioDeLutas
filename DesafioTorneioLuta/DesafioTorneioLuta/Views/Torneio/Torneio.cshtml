@@ -1,0 +1,68 @@
+﻿@model List<CoreModels.LutadorModel>
+
+@{
+    ViewBag.Title = "Torneio de Lutas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <form method="post" asp-action="Torneio" asp-controller="Torneio">
+
+        @Html.AntiForgeryToken()
+
+        <br>
+
+        <h2 style="text-align:center">Torneio de Lutadores</h2>
+
+        <br>
+
+        @if (ViewBag.Message != null)
+        {
+            <h5 style="color:red">@ViewBag.Message</h5>
+        }
+
+        <br><br>
+
+        <button type="button" class="btn btn-primary"><input type="submit" value="Inciar Torneio" class="btn" /></button>
+
+        <br /><br /><br />
+
+
+        <div class="row">
+            @{
+                for (int i = 0; i < Model.Count(); i++)
+                {
+
+                    <div class="col-sm-6">
+                        <div class="card border-light mb-3">
+                            <div class="card-header"><input asp-for="@Model[i].selecionado" type="checkbox"><label asp-for="@Model[i].id"> @Model[i].nome</label></div>
+                            <div class="card-body">
+                                <p></p>
+                                <label class="control-label">Idade:</label> @Model[i].idade<br />
+                                <label class="control-label">Lutas:</label>@Model[i].lutas<br />
+                                <label class="control-label">Derrotas:</label>@Model[i].derrotas<br />
+                                <label class="control-label">Vitorias:</label>@Model[i].vitorias<br />
+                                <label class="control-label">Artes Marciais:</label>@Model[i].artesMarciais.Count.ToString()<br />
+
+                                <input asp-for="@Model[i].id" type="hidden">
+                                <input asp-for="@Model[i].nome" type="hidden">
+                                <input asp-for="@Model[i].idade" type="hidden">
+                                <input asp-for="@Model[i].artesMarciais" type="hidden">
+                                <input asp-for="@Model[i].lutas" type="hidden">
+                                <input asp-for="@Model[i].derrotas" type="hidden">
+                                <input asp-for="@Model[i].vitorias" type="hidden">
+
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+
+
+                }
+            }
+        </div>
+
+
+    </form>
+
+
+
